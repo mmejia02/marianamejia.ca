@@ -4,13 +4,32 @@ import { ReactElement } from "react";
 
 export default function Home() {
   const skills: SkillProps[] = [
-        { imageUrl: "/figma.jpg", alt: "Figma Logo", href: "https://www.figma.com" },
-        { imageUrl: "/illustrator.jpg", alt: "Adobe Illustrator Logo", href: "https://www.adobe.com/ca/products/illustrator.html" },
-        { imageUrl: "/procreate.jpg", alt: "Procreate Logo", href: "https://procreate.com/" },
-        { imageUrl: "/fusion.jpg", alt: "Fusion360 Logo", href: "https://www.autodesk.com/ca-en/products/fusion-360/overview" },
-        { imageUrl: "/rhino.jpg", alt: "Rhino Logo", href: "https://www.rhino3d.com/" },
-
-    ]
+    {
+      imageUrl: "/figma.jpg",
+      alt: "Figma Logo",
+      href: "https://www.figma.com",
+    },
+    {
+      imageUrl: "/illustrator.jpg",
+      alt: "Adobe Illustrator Logo",
+      href: "https://www.adobe.com/ca/products/illustrator.html",
+    },
+    {
+      imageUrl: "/procreate.jpg",
+      alt: "Procreate Logo",
+      href: "https://procreate.com/",
+    },
+    {
+      imageUrl: "/fusion.jpg",
+      alt: "Fusion360 Logo",
+      href: "https://www.autodesk.com/ca-en/products/fusion-360/overview",
+    },
+    {
+      imageUrl: "/rhino.jpg",
+      alt: "Rhino Logo",
+      href: "https://www.rhino3d.com/",
+    },
+  ];
   return (
     <main className="flex flex-col items-center justify-between p-12 md:p-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-40 mt-12">
@@ -44,8 +63,10 @@ export default function Home() {
         <h2 className="text-xl font-bold">Skills</h2>
       </div>
       <div className="flex flex-row gap-4">
-                {skills.map(skill => <SkillItem key={skill.imageUrl} {...skill} />)}
-            </div>
+        {skills.map((skill) => (
+          <SkillItem key={skill.imageUrl} {...skill} />
+        ))}
+      </div>
     </main>
   );
 }
